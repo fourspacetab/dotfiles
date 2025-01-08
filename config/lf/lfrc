@@ -1,0 +1,36 @@
+# execute current file (must be executable)
+map x $$f
+map X !$f
+
+# mkdir command
+map a :push %mkdir<space>
+
+set drawbox true
+set info size
+set dircounts
+
+# leave some space at the top and the bottom of the screen
+set scrolloff 10
+
+# refresh file list once per second
+set period 1
+
+# use '<D>' key for 'delete' command
+map D delete
+
+# clear mark from files after pasting
+map p : paste; clear
+
+set icons
+
+set hidden
+
+set number
+set relativenumber
+
+# cptv integration
+set previewer ctpv
+set cleaner ctpvclear
+
+&ctpv -s $id
+&ctpvquit $id
